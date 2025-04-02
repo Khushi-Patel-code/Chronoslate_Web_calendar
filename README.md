@@ -34,6 +34,6 @@ ChronoSlate is a web-based interactive calendar designed to help users manage th
 
 ## Live Demo
 
-Live Demo of the web calendar can be found at
+Live Demo of the web calendar can be found at https://khushi-patel-code.github.io/Chronoslate_Web_calendar/ 
 
 
