@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChronoSlate-Calendar</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- google font: roboto slab-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- google font: playfair display -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <h1>ChronoSlate</h1>
+
+    <!-- Month Navigation Controls -->
+    <div id="current-month-container">
+        <button id="prev-month">Previous Month</button>
+        <span id="current-month"></span>    
+        <button id="next-month">Next Month</button>
+    </div>
+
+    <!--Calendar Table-->
+    <table id="calendar-table">
+        <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+
+        <!-- Calendar dates will be dynamically generated using JavaScript -->
+        <tbody id="calendar-body">
+        </tbody>
+    </table>
+
+    <!-- Event Details Modal (Popup for Adding Events) -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>  
+            <h2>Add Event Details</h2>
+            <form id="event-form">
+    
+                <div class="form-group">
+                    <label for="event-name">Event Name:</label>
+                    <input type="text" id="event-name" name="event-name"  required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="event-reason">Event Reason:</label>
+                    <input type="text" id="event-reason">
+                </div>
+    
+                <div class="form-group">
+                    <label for="event-color">Event Color:</label>
+                        <select id="event-color" >
+                            <!-- First option as a placeholder -->
+                            <option value="#01BAEF" style="background-color: #ffffffc8;">Select the event color</option>
+                            <option value="#d6102e" style="background-color: #d6102e;">Red</option>
+                            <option value="#e2531f" style="background-color: #e2531f">Orange</option>
+                            <option value="#0080ff" style="background-color: #0080ff;">Dark Blue</option>
+                            <option value="#1bcc56" style="background-color: #1bcc56;">Green</option>
+                            <option value="#01bbef" style="background-color: #01bbef;">Blue</option>
+                            <option value="#FFDB00" style="background-color: #FFDB00;">Yellow</option>
+                            <option value="#db2458" style="background-color: #db2458;">Pink</option>
+                            <option value="#634bc4" style="background-color: #634bc4;">Purple</option>
+                        </select>
+                </div>
+
+    
+                <div class="form-group">
+                    <label for="event-description">Add Notes:</label>
+                    <textarea id="event-description" placeholder="Add Additional Notes"></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <label for="event-link">Link:</label>
+                    <input type="url" id="event-link" name="event-link" placeholder="https://example.com">
+                </div>
+
+                <!-- Buttons for Saving or Clearing the Event -->
+                <div id="event-buttons"> 
+                    <button type="submit" id="save-event">Save Event</button>
+                    <button type="button" id="clear-event">Clear Event</button> 
+            </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
