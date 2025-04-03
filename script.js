@@ -83,9 +83,6 @@ function loadCalendarBookings(cell , day, month, year) {
                 if (confirm(`Are you sure you want to delete this booking on: ${booking.date}?\nbooking name: ${booking.name}\nbooking Reason: ${booking.reason}`)) {
                     try {
                         bookings = bookings.filter(b => b !== booking);   // Remove the selected booking from the array and update localStorage
-                        if (bookings.length === 0) {
-                            alert("No bookings to delete.");
-                        }
                         localStorage.setItem("bookings", JSON.stringify(bookings)); // updated bookings
                         generateCalendar(currentMonth, currentYear); 
                     } catch (error) {
